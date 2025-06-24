@@ -19,14 +19,12 @@ apply_custom_css()
 # Gemaakt met os functies en ChatGPT.
 # https://docs.python.org/3/library/os.path.html
 # Controle of het bestand logo.png bestaat
-logo_path = "assets/logo.png"
-logo = Image.open(logo_path) if os.path.exists(logo_path) else None
-# Als het logo bestaat wordt het ingeladen in de sidebar van de applicatie.
-# https://docs.streamlit.io/develop/api-reference/media/st.logo
-if logo:
+logo_path = os.path.join(os.path.dirname(__file__), "assets", "logo.png")
+if not os.path.exists(logo_path):
+    st.sidebar.error(f"🛑 Logo niet gevonden! Verwacht pad: {logo_path}")
+else:
+    logo = Image.open(logo_path)
     st.sidebar.image(logo, use_container_width=True)
-# De afbeelding logo.png is zelf gemaakt m.b.v. Procreate 5.3.15,
-# en sjablonen van Canva.
 
 
 
