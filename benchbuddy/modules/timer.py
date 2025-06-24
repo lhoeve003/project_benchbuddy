@@ -86,7 +86,7 @@ def show():
             mins, secs = divmod(rem, 60)
             st.info(f"⏳ {hrs:02}:{mins:02}:{secs:02} remaining")
             # Zorgt er voor dat de timer elke seconden bijwerkt.
-            st.experimental_rerun()
+            st.rerun()
 
     # Als de timer op pauze staat:
     elif st.session_state.timer_state == "paused":
