@@ -94,7 +94,7 @@ Source: [VDL NDSU factsheet](
 https://www.vdl.ndsu.edu/wp-content/uploads/2022/10/PCR-Ct-Values-1.pdf)
 """)
 
-    st.markdown("### The 2<sup> ΔCt</sup> Method")
+    st.markdown("### The 2⁽ΔCt⁾ Method")
 
     st.markdown(
         "This method compares the Ct of your **target gene** with a "
